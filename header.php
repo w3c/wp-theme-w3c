@@ -29,7 +29,7 @@
 		echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
 
 	?></title>
-<meta name="viewport" content="width=device-width" />	
+<meta name="viewport" content="width=device-width" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -54,8 +54,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<header id="branding" role="banner">		
-		
+	<header id="branding" role="banner">
+
 		<?php
 			// Check if this is a post or page, if it has a thumbnail, and if it's a big one
 			if ( is_singular() &&
@@ -65,18 +65,18 @@
 				// Houston, we have a new header image!
 				echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
 			else : ?>
-			<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" /></a>
+			<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="https://www.w3.org/assets/logos/w3c/w3c-white-no-background.svg" style="height: 100px; padding: 5px" alt="" /></a>
 			<?php endif; ?>
 	</header><!-- #branding -->
-			
+
 <div id="wrapper" class="hfeed">
 	<div id="header">
-		<div id="masthead">			
-			<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>		
-		<<?php echo $heading_tag; ?> id="site-title">		
+		<div id="masthead">
+			<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
+		<<?php echo $heading_tag; ?> id="site-title">
 			<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-		</<?php echo $heading_tag; ?>>			
-			<div id="site-description">		
+		</<?php echo $heading_tag; ?>>
+			<div id="site-description">
 			<?php bloginfo( 'description' ); ?>
 			<?php get_sidebar( 'header' ); ?>
 			</div>
